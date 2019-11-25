@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   zookeeper-1:
-    image: confluentinc/cp-zookeeper:5.0.0
+    image: confluentinc/cp-zookeeper:5.3.1
     hostname: zookeeper-1
     container_name: zookeeper-1
     ports:
@@ -16,7 +16,7 @@ services:
       - zookeeper-1-log:/var/lib/zookeeper/log/
 
   kafka-1:
-    image: confluentinc/cp-kafka:5.0.0
+    image: confluentinc/cp-kafka:5.3.1
     hostname: kafka-1
     container_name: kafka-1
     stop_grace_period: 5m
@@ -31,7 +31,7 @@ services:
       - kafka-1-data:/var/lib/kafka/data/
 
   schema-registry:
-    image: confluentinc/cp-schema-registry:5.0.0
+    image: confluentinc/cp-schema-registry:5.3.1
     hostname: schema-registry
     container_name: schema-registry
     depends_on:
